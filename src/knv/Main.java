@@ -21,11 +21,14 @@ class Server {
     private static final int BUFFER_SIZE = 256;
     private AsynchronousServerSocketChannel server;
     private static final String HEADERS =
-            "HTTP/1.1 200 OK\n" +
-                    "Server: simpleHTTPServer\n" +
-                    "Content-type: text/html\n" +
-                    "Content-Length: %s\n" +
-                    "Connection: close\n\n";
+            """
+                    HTTP/1.1 200 OK
+                    Server: simpleHTTPServer
+                    Content-type: text/html
+                    Content-Length: %s
+                    Connection: close
+
+                    """;
 
     public void bootstrap() {
         try {
