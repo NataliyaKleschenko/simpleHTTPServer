@@ -69,11 +69,7 @@ class Server {
                         clientChannel.write(response);
                         clientChannel.close();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
+                } catch (IOException | InterruptedException | ExecutionException e) {
                     e.printStackTrace();
                 }
             }
